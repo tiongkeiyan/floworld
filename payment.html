@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Malaysia's Premium Flower Delivery Service | Floworld</title>
+    <!--favicon-->
+    <link rel= "icon" type= "image/png" href= "images/favicon.ico">
+    <!--font awesome icons-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <!--bootstrap font awesome icons-->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <!--custom css-->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="logo-header">
+        <a href="index.html"><img src="Images/footer-logo.png"></a>
+    </div>
+    <h2 class="cart-title">Payment Information</h2>
+    <div class="payment-page">
+        <!--payment form-->
+        <div class="payment-form-container">
+            <form id="payment-form" class="shipping-form" method="get" action="success.html">
+                <input type="text" placeholder="Card Number" required title="16-digit card number for VISA and Mastercard, 15-digit card number for AMEX" pattern="[0-9]{15}[0-9]?"><br>                
+                <select class="expiry-date drop-down-list" required>
+                    <option value="" disabled selected>MM</option>
+                    <option value="01">January</option>
+                    <option value="02">February </option>
+                    <option value="03">March</option>
+                    <option value="04">April</option>
+                    <option value="05">May</option>
+                    <option value="06">June</option>
+                    <option value="07">July</option>
+                    <option value="08">August</option>
+                    <option value="09">September</option>
+                    <option value="10">October</option>
+                    <option value="11">November</option>
+                    <option value="12">December</option>
+                </select>
+                <select class="expiry-date drop-down-list" required>
+                    <option value="" disabled selected>YYYY</option>
+                    <option value="19"> 2019</option>
+                    <option value="20"> 2020</option>
+                    <option value="21"> 2021</option>
+                    <option value="22"> 2022</option>
+                    <option value="23"> 2023</option>
+                    <option value="24"> 2024</option>
+                </select>
+                <input type="text" id="cvv" placeholder="CVV" required title="3-digit CVV for VISA and Mastercard, 4-digit CVV for AMEX" pattern="[0-9]{3}[0-9]?"><br>  
+                <!--purpose: to submit form using button outside of form-->
+                <input type="submit" id="submit-payment-form" hidden>
+            </form>
+            <br>
+            <!--payment icons-->
+            <div class="payment-icon-container">
+                <i id="amex" class="fab fa-cc-amex fa-2x"></i> <i id="visa" class="fab fa-cc-visa fa-2x"></i> <i id="mastercard" class="fab fa-cc-mastercard fa-2x"></i>
+            </div>
+        </div>
+        <!--end of payment form-->
+        <!--payment page: cart details-->
+        <div class="cart-shipping">
+            <div class="cart-content">
+            <!--cart items inserted here using javascript-->
+            </div>
+            <div class="cart-footer">
+                <h3>Subtotal: RM <span class="cart-total">0</span></h3>
+                <h3>Delivery: FREE</h3>
+                <h3>Total: RM <span class="cart-final-total">0</span></h3>
+            </div>  
+        </div>
+        <!--end of payment page: cart details-->
+    </div>
+    <!--submit payment form when clicked-->
+    <div class="checkout-next">
+        <label for="submit-payment-form" tabindex="0" class="btn" id="checkout-btn">Confirm Purchase</label><br>
+    </div>
+    <!--back to previous page-->
+    <a href="shipping.html" class="cont-shopping">&#8826; Return to shipping information</a>  
+    <script type="text/javascript" src="app.js"></script>
+</body>
+</html>

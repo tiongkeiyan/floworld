@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Malaysia's Premium Flower Delivery Service | Floworld</title>
+    <!--favicon-->
+    <link rel= "icon" type= "image/png" href= "images/favicon.ico">
+    <!--font awesome icons-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <!--bootstrap font awesome icons-->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <!--custom css-->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="logo-header">
+        <a href="index.html"><img src="Images/footer-logo.png"></a>
+    </div>
+    <h2 class="cart-title">Shipping Information</h2>
+    <div class="shipping-page">
+        <!--shipping form-->
+        <div class="shipping-form-container">
+            <h2>Contact Information</h2>
+            <form class="shipping-form" method="get" action="payment.html">
+                <input type="email" placeholder="Email" required><br>
+                <!--pattern used to validate contact number-->
+                <input type="text" placeholder="Contact Number" title="Enter a valid phone number" pattern="[0-9]{3}-?[0-9]{7}[0-9]?" required><br>             
+                <h2>Delivery Address</h2>
+                <input type="text" placeholder="Recipient's Name" required><br>
+                <input type="text" placeholder="Address Line 1" required><br> 
+                <input type="text" placeholder="Address Line 2" required><br>      
+                <input type="text" placeholder="City" required><br>
+                <select id="state-list" class="drop-down-list" required>
+                    <option value="" disabled selected>State</option>
+                    <option value="Johor">Johor</option>
+                    <option value="Kedah">Kedah</option>
+                    <option value="Kelantan">Kelantan</option>
+                    <option value="Kuala Lumpur">Kuala Lumpur</option>
+                    <option value="Labuan">Labuan</option>
+                    <option value="Melaka">Melaka</option>
+                    <option value="Negeri Sembilan">Negeri Sembilan</option>
+                    <option value="Pahang">Pahang</option>
+                    <option value="Perak">Perak</option>
+                    <option value="Perlis">Perlis</option>
+                    <option value="Pulau Pinang">Pulau Pinang</option>
+                    <option value="Putrajaya">Putrajaya</option>
+                    <option value="Sabah">Sabah</option>
+                    <option value="Sarawak">Sarawak</option>
+                    <option value="Selangor">Selangor</option>
+                    <option value="Terengganu">Terengganu</option>
+                </select>
+                <!--pattern used to validate postcode-->
+                <input type="text" id="postcode" placeholder="Postcode" title="5-digit postcode" pattern="[0-9]{5}" required>
+                <!--purpose: submit form using button outside of form-->
+                <input type="submit" id="submit-shipping-form" hidden>
+            </form>
+        </div>
+        <!--end of shipping form-->
+        <!--shipping page: cart details-->
+        <div class="cart-shipping">
+            <div class="cart-content">
+            <!--cart items inserted here using javascript-->
+            </div>
+            <div class="cart-footer">
+                <h3>Subtotal: RM <span class="cart-total">0</span></h3>
+                <h3>Delivery: FREE</h3>
+                <h3>Total: RM <span class="cart-final-total">0</span></h3>
+            </div>  
+        </div>
+        <!--end of shipping page: cart details-->
+    </div>
+    <!--submit shipping form when clicked-->
+    <div class="checkout-next">
+        <label for="submit-shipping-form" tabindex="0" class="btn" id="checkout-btn">Next</label><br>
+    </div>
+    <!--go to previous page-->
+    <a href="cart.html" class="cont-shopping">&#8826; Return to cart</a>  
+    <script type="text/javascript" src="app.js"></script>
+</body>
+</html>

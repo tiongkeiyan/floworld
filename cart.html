@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Malaysia's Premium Flower Delivery Service | Floworld</title>
+    <!--favicon-->
+    <link rel= "icon" type= "image/png" href= "images/favicon.ico">
+    <!--font awesome icons-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <!--bootstrap font awesome icons-->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <!--custom css-->
+    <link rel="stylesheet" href="style.css">
+    <!--datepicker libraries-->
+    <link href="datepicker/picker-light.css" rel="stylesheet">
+</head>
+<body>
+    <div class="logo-header">
+        <a href="index.html"><img src="Images/footer-logo.png"></a>
+    </div>
+    <h2 class="cart-title">Shopping Cart</h2>
+    <div class="cart-page">
+        <!--cart: cart details-->
+        <div class="cart-checkout">
+            <div class="cart-content">
+            <!--cart items inserted here using javascript-->
+            </div>
+            <div class="cart-footer">
+                <h3>Subtotal: RM <span class="cart-total">0</span></h3>
+                <button class="clear-cart">Clear cart</button>
+            </div>
+        </div>
+        <!--end of cart: cart details-->
+        <!--calendar & message-->
+        <div class="calendar-container">
+            <!--calendar output-->
+            <h3>Delivery date: <span id="input-inline"></span></h3>
+            <!--calendar-->
+            <div id="pick-inline"></div>
+            <h3>Personal Card Message:</h3>
+            <textarea rows="2" cols="25" class="msg-input" placeholder="Hello! I hope you love the flowers."></textarea>  
+        </div>
+        <!--end of calendar & message-->
+    </div>
+    <!--proceed to next page-->
+    <div class="checkout-next">
+        <a href="shipping.html"><button class="btn" id="checkout-btn">Next</button></a><br>
+    </div>
+    <!--go back to main page-->
+    <a href="index.html" class="cont-shopping">&#8826; Continue shopping</a>  
+    <!--to import calendar js library-->
+    <script>
+        window.addEventListener("load", function(){
+            // container + target input
+            picker.attach("pick-inline", "input-inline");
+        });
+    </script>
+    <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="datepicker/datepicker.js"></script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Malaysia's Premium Flower Delivery Service | Floworld</title>
+    <!--favicon-->
+    <link rel= "icon" type= "image/png" href= "images/favicon.ico">
+    <!--font awesome icons-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <!--bootstrap font awesome icons-->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <!--custom css-->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--navbar-->
+    <nav class="navbar">
+        <div class="navbar-items">
+            <div>
+                <a href="index.html">shop</a>
+                <a href="testimonials.html">testimonials</a>
+            </div>  
+            <a href="index.html" class="nav-logo"><img src="/images/logo.png" alt="Floworld logo"></a>
+            <div class="navright">
+                <span class="nav-icon"><a href="login.html"><i class="fas fa-user-circle"></i></a></span>
+                <span id="cart-btn" class="nav-icon"><i class="fas fa-shopping-cart"></i></span>
+                <div class="cart-items">0</div>
+            </div>   
+        </div>
+    </nav>
+    <!--end of navbar-->
+    <br><br><h2 class="section-title">Register</h2>
+    <div id="email-exist-msg" class="validation-message"></div>
+    <!--registration form-->
+    <div class="validation-form">
+        <form name="reg-form" id="reg-form" action="/login.html" method="GET">
+            <input type="text" name="first-name" id="first-name" placeholder="First Name" required><br>
+            <input type="text" name="last-name" id="last-name" placeholder="Last Name" required><br>
+            <input type="email" autocomplete="off" name="email" id="email-register" placeholder="Email" required ><br>
+            <input type="password" autocomplete="off" name="password" id="pw-register" placeholder="Password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number, one uppercase letter and one lowercase letter, and at least 8 or more characters"><br>
+            <button type="submit" class="btn" id="register-btn">sign up</button><br><br>
+            Have an account?<a href="login.html"> Login.</a>  
+        </form>
+    </div>
+    <!--end of registration form-->
+    <!--cart-->
+    <div class="cart-overlay">
+        <div class="cart">
+            <span class="close-cart"><i class="far fa-times-circle"></i></span>
+            <h2>shopping cart</h2>
+            <div class="cart-content">
+                <!--cart items inserted here using javascript-->
+            </div>
+            <div class="cart-footer">
+                <h3>Subtotal: RM <span class="cart-total">0</span></h3>
+                <button class="clear-cart">Clear cart</button>
+                <a href="cart.html"><button class="btn" id="checkout-btn">Checkout</button></a>
+            </div>
+        </div>
+    </div>
+    <!--end of cart-->
+    <!--footer-->
+    <footer>
+        <div class="wrapper">
+            <ul>
+                <li><img src="Images/footer-logo.png" id="footer-logo"></li>
+                <li>Malaysia’s most stylish online florist, Floworld, is all about creating moments of happiness. We take pride in going at great lengths to find the most luxurious flowers from around the world and bring them right to you.
+            </ul>
+            <ul>
+                <li><img src="Images/flower-footer.png"></li></ul>
+            <ul>
+                <li><h4>contact us</h4></li>
+                <li id="lab_social_icon_footer">
+                    <a href="https://www.facebook.com/floworld" target="_blank"><i id="social-fb" class="fa fa-facebook-square fa-3x social"></i></a>
+                    <a href="https://twitter.com/floworld" target="_blank"><i id="social-tw" class="fa fa-twitter-square fa-3x social"></i></a>
+                    <a href="tel:012-3456789"><i id="social-no" class="fa fa-phone-square fa-3x social"></i></a>
+                    <a href="mailto:contact@floworld.com"><i id="social-em" class="fa fa-envelope-square fa-3x social"></i></a>
+                </li>
+                <li><h4>newsletter</h4></li>
+                <li id="success-msg">Subscribe to receive updates, exclusive deals and more.</li>
+                <li><input type="email" name="Email Address" id="email-field" autocomplete="off" placeholder="Enter Your Email Address"><br></li>
+                <li><button class="btn" id="sub-btn">Sign me up!</button></li>
+            </ul>
+            <div id="copyright">COPYRIGHT &copy; FLOWORLD • 2019 • ALL RIGHTS RESERVED</div>
+        </div>
+    </footer>
+    <!--end of footer-->
+    <script type="text/javascript" src="app.js"></script>
+</body>
+</html>
